@@ -1,0 +1,64 @@
+EL CALENDARIO DE ADVIENTO DE PEPRESI · Publicarlo en Netlify
+============================================================
+
+QUÉ HAY EN ESTA CARPETA
+  public/index.html               La web (árbol, regalos, animaciones, formularios).
+  netlify/functions/api.mjs       El "servidor": guarda respuestas y fotos y decide la fecha.
+  netlify/functions/days.mjs      Los textos de los 24 días (editables).
+  netlify.toml, package.json      Configuración para Netlify. No hace falta tocarlos.
+
+Respuestas y fotos se guardan en Netlify Blobs (almacenamiento de Netlify,
+incluido en el plan gratuito). No necesitas base de datos.
+
+IMPORTANTE: NO VALE ARRASTRAR LA CARPETA A NETLIFY DROP
+  Arrastrar y soltar solo publica la página, no la parte que guarda los datos.
+  Usa una de estas dos formas:
+
+  OPCIÓN A · Con GitHub (la más cómoda para hacer cambios después)
+    1. Crea un repositorio PRIVADO en GitHub y sube el contenido de esta carpeta.
+    2. En Netlify: Add new site > Import an existing project > GitHub > elige el repositorio.
+       Deja los ajustes que salen por defecto y pulsa Deploy.
+    3. Sigue con "LA CONTRASEÑA", más abajo.
+
+  OPCIÓN B · Con Netlify CLI desde tu ordenador (necesitas Node.js)
+    En una terminal, dentro de esta carpeta:
+      npm install
+      npx netlify-cli login
+      npx netlify-cli init           (crea el sitio)
+      npx netlify-cli deploy --prod
+    Sigue con "LA CONTRASEÑA".
+
+LA CONTRASEÑA (obligatorio)
+  En Netlify: tu sitio > Site configuration > Environment variables > Add a variable
+    Key:   CALENDAR_PASSWORD
+    Value: la contraseña que quieras
+  Después: Deploys > Trigger deploy > Deploy site (para que la coja).
+  Cada dispositivo la pide una vez y la recuerda más de un año.
+  Si la cambias, todos tendrán que volver a escribirla.
+
+EN EL IPAD O EL IPHONE
+  Abre la web en Safari > botón Compartir > "Añadir a pantalla de inicio".
+  Se abrirá como si fuera una app.
+
+FECHAS (hora de Madrid, según el reloj de Netlify)
+  - Hasta el 29 de noviembre: MODO REVISIÓN. Todo abierto para revisar texto a texto.
+    Dentro de cada regalo, las flechas ‹ › pasan de un día a otro.
+    "Ver como si fuera…" simula un día. "Borrar pruebas" lo deja todo como nuevo.
+  - 30 de noviembre a las 00:00: se borran solas todas las pruebas (respuestas y fotos)
+    y se bloquean los 24 regalos.
+  - Desde el 1 de diciembre: se abre un regalo cada día a las 00:00.
+  - Después del 24 se puede seguir entrando a ver todo.
+  Para cambiar la fecha del fin de las pruebas: TEST_UNTIL en netlify/functions/api.mjs.
+
+SEGURIDAD
+  - Los textos de cada día solo salen del servidor cuando llega su fecha:
+    ni mirando el código de la página se pueden leer antes.
+  - Cambiar la hora del iPad no adelanta nada.
+  - Sin contraseña no se ve nada: ni textos, ni respuestas, ni fotos.
+  - Si usas GitHub, el repositorio debe ser PRIVADO (contiene los textos).
+
+EDITAR TEXTOS
+  En netlify/functions/days.mjs. Cada día tiene title (título), intro (párrafos),
+  mission (misión), note (aviso opcional) y los campos de respuesta.
+  Respeta comillas y comas. Tras cambiarlo, vuelve a publicar
+  (con GitHub basta con subir el cambio).
