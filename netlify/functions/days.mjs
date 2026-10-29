@@ -4,6 +4,7 @@
 //  cat: E = Esperanza·Agradecer, P = Paz·Dar, A = Alegría·Disfrutar, M = Amor·Compartir
 //  Tipos de campo (t): textarea, text, date, link, rating (1-10), choice (options), photos
 //  note: aviso bajo la explicación (noteOk: true lo muestra en verde)
+//  ps: posdata en cursiva al final del texto
 //  El servidor solo envía el contenido de los días que ya se pueden abrir.
 // ============================================================
 export default {
@@ -21,7 +22,7 @@ export default {
           {
             "t": "textarea",
             "id": "orgullo",
-            "label": "Mi orgullo de 2026"
+            "label": "Me siento orgulloso este 2026 por…"
           }
         ]
       }
@@ -33,8 +34,7 @@ export default {
     "intro": [
       "¡Hoy toca una sorpresa deportiva! Tenemos pendiente ir juntos a disfrutar de un partido del Valencia Basket."
     ],
-    "mission": "Estamos buscando un partido que nos encaje y, en cuanto tengamos la fecha, te avisaremos para que reserves el día. Después del partido, vuelve aquí para contarnos el resultado y subir una fotografía de recuerdo.",
-    "note": "Fecha del partido: pendiente de confirmar",
+    "mission": "Te avisaremos un día antes del partido. Después del partido, vuelve aquí para contarnos el resultado y subir una fotografía de recuerdo.",
     "phases": [
       {
         "title": "Después del partido",
@@ -91,53 +91,24 @@ export default {
     "intro": [
       "A lo largo de este año seguro que ha habido personas que te han ayudado, te han acompañado o han hecho algo bonito por ti."
     ],
-    "mission": "Elige a tres personas y dales las gracias de verdad. Puede ser en persona, por mensaje o con una llamada. Después, escribe aquí quiénes son y por qué les has dado las gracias.",
+    "mission": "Elige a tres personas y dales hoy las gracias de verdad: en persona, por mensaje o con una llamada. Lo que les digas queda entre vosotros; aquí solo tienes que escribir a quién se las has dado.",
     "phases": [
       {
-        "title": "Primera persona",
         "fields": [
           {
             "t": "text",
             "id": "p1",
-            "label": "¿Quién es?"
+            "label": "Primera persona"
           },
-          {
-            "t": "textarea",
-            "id": "m1",
-            "label": "¿Por qué le has dado las gracias?",
-            "rows": 3
-          }
-        ]
-      },
-      {
-        "title": "Segunda persona",
-        "fields": [
           {
             "t": "text",
             "id": "p2",
-            "label": "¿Quién es?"
+            "label": "Segunda persona"
           },
-          {
-            "t": "textarea",
-            "id": "m2",
-            "label": "¿Por qué le has dado las gracias?",
-            "rows": 3
-          }
-        ]
-      },
-      {
-        "title": "Tercera persona",
-        "fields": [
           {
             "t": "text",
             "id": "p3",
-            "label": "¿Quién es?"
-          },
-          {
-            "t": "textarea",
-            "id": "m3",
-            "label": "¿Por qué le has dado las gracias?",
-            "rows": 3
+            "label": "Tercera persona"
           }
         ]
       }
@@ -147,18 +118,16 @@ export default {
     "cat": "M",
     "title": "Una Navidad esquiando",
     "intro": [
-      "¡Este año la Navidad también se vive entre montañas!"
+      "¡Este año la Navidad se vive esquiando!"
     ],
-    "mission": "Aprovecha vuestro viaje a Andorra durante el puente de diciembre para descubrir las luces y la decoración navideña. Haz una fotografía juntos y súbela aquí para guardar un recuerdo especial de esta Navidad.",
-    "note": "Puedes completarla en cualquier momento del puente",
-    "noteOk": true,
+    "mission": "Aprovecha el viaje a Andorra del puente de diciembre para descubrir las luces y la decoración navideña. Haz una foto de todo el equipo de esquiadores y súbela aquí. Puedes completarla en cualquier momento, fiera.",
     "phases": [
       {
         "fields": [
           {
             "t": "photos",
             "id": "fotos",
-            "label": "Nuestra foto en Andorra",
+            "label": "Foto del equipo de esquiadores",
             "optional": false
           }
         ]
@@ -171,15 +140,14 @@ export default {
     "intro": [
       "Hay regalos que hacen especial ilusión precisamente porque no esperamos nada a cambio."
     ],
-    "mission": "Este año participarás en la iniciativa solidaria del trabajo de Ampi. Elige un regalo pensando en el niño que lo recibirá, prepáralo y escribe aquí qué has escogido y por qué. También puedes subir una fotografía.",
-    "note": "Fecha y detalles de la entrega: pendientes de confirmar",
+    "mission": "Este año participarás en la iniciativa solidaria del trabajo de Ampi. Os dirán quién es el niño y qué le gusta, y tendréis que ir juntos a comprarle un regalo pensado para él. Después, escribe aquí qué habéis escogido y por qué.",
     "phases": [
       {
         "fields": [
           {
             "t": "textarea",
             "id": "regalo",
-            "label": "¿Qué has escogido y por qué?"
+            "label": "¿Qué habéis escogido y por qué?"
           },
           {
             "t": "photos",
@@ -212,11 +180,11 @@ export default {
   },
   "8": {
     "cat": "E",
-    "title": "Cuando tus padres eran pequeños…",
+    "title": "Cuando Cris y JP eran pequeños…",
     "intro": [
-      "Aunque cueste imaginarlo, mamá y papá también fueron niños y vivieron aventuras que quizá todavía no conoces."
+      "Aunque cueste imaginarlo, Cris y JP también fueron niños y vivieron aventuras que quizá todavía no conoces."
     ],
-    "mission": "Pregúntales por uno de sus recuerdos favoritos de la infancia. Escucha sus historias y escribe aquí lo que te hayan contado. Si encontráis una fotografía antigua, ¡súbela también!",
+    "mission": "Pregúntales por uno de sus recuerdos favoritos de la infancia. Escucha sus historias y escribe aquí lo que te hayan contado. Puedes subir una foto antigua o una de ellos contándotelo.",
     "phases": [
       {
         "fields": [
@@ -229,7 +197,7 @@ export default {
           {
             "t": "photos",
             "id": "fotos",
-            "label": "Foto antigua",
+            "label": "Foto antigua o de ellos contándotelo",
             "optional": true
           }
         ]
@@ -240,9 +208,9 @@ export default {
     "cat": "P",
     "title": "Una compra que no es para ti",
     "intro": [
-      "Hoy toca ir de compras, pero esta vez no vas a elegir nada para ti."
+      "Hoy toca ir de compras, pero esta vez a Consum."
     ],
-    "mission": "Participa en la Campaña del Kilo del colegio. Elige los alimentos que quieres aportar, prepáralos y llévalos al colegio. Después, escribe aquí qué has comprado.",
+    "mission": "Participa en la Campaña del Kilo del colegio. Elige los alimentos que quieres aportar y llévalos al colegio. Después, escribe aquí qué has comprado.",
     "phases": [
       {
         "fields": [
@@ -261,7 +229,7 @@ export default {
     "intro": [
       "Hoy el objetivo es muy sencillo: hacer que alguien tenga un día un poquito mejor gracias a ti."
     ],
-    "mission": "Prepara un detalle inesperado para alguien. Puede ser una sorpresa, una nota o cualquier gesto que creas que le hará ilusión. Después, vuelve aquí y cuéntanos qué has hecho.",
+    "mission": "Prepara un detalle inesperado para alguien. Puede ser ayudar a hacer la cena, preparar el café, una nota o cualquier pequeño gesto que creas que le hará ilusión. Después, vuelve aquí y cuéntanos qué has hecho.",
     "phases": [
       {
         "fields": [
@@ -362,7 +330,7 @@ export default {
     "intro": [
       "Hay algo que puedes regalar sin comprar absolutamente nada: tu tiempo."
     ],
-    "mission": "Elige a alguien, pregúntale qué le gustaría hacer contigo y dedica un rato a ese plan, aunque no sea tu favorito. Después, escribe aquí con quién has estado y qué habéis hecho.",
+    "mission": "Elige a alguien y dedícale un rato a un plan que le haga ilusión, aunque no sea tu favorito. Puede ser algo sencillo: acompañar a tus padres a un recado, ir con ellos a algo que a ti no te apetece tanto pero a ellos sí, o dejar que elijan la peli y simplemente acompañarles. Después, escribe aquí con quién has estado y qué habéis hecho.",
     "phases": [
       {
         "fields": [
@@ -459,7 +427,7 @@ export default {
   },
   "17": {
     "cat": "P",
-    "title": "Una Navidad sin esperar nada a cambio",
+    "title": "Un «Feliz Navidad» más especial",
     "intro": [
       "Una felicitación escrita con cariño puede hacer mucha más ilusión de la que imaginas."
     ],
@@ -480,7 +448,8 @@ export default {
           }
         ]
       }
-    ]
+    ],
+    "ps": "PD: El año pasado te lo pelaste, pero con dos frases es suficiente."
   },
   "18": {
     "cat": "M",
@@ -601,7 +570,7 @@ export default {
       "Una cena para disfrutar entre hermanos, ponerse al día y pasar un buen rato juntos."
     ],
     "mission": "Reserva la fecha de vuestra cena navideña y, cuando llegue el día, haz una fotografía de todos los hermanos y súbela aquí.",
-    "note": "Fecha de la cena: pendiente de confirmar",
+    "note": "Fecha de la cena: pendiente de confirmar"  /* ← DÍA 21: cambia este texto cuando sepáis la fecha */,
     "phases": [
       {
         "fields": [
